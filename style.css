@@ -1,0 +1,61 @@
+.wrapper {
+  background: url(./bg.jpg) no-repeat center;
+  background-size: cover;
+  /* filter: blur(1px); */
+}
+.phone {
+  background: url(./bg.jpg) no-repeat center;
+  background-size: cover;
+  /* filter: blur(0.5px); */
+}
+.slider {
+  width: 100%;
+  /* this is used to make the appearance work with each browser  */
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: url(./bg.jpg) no-repeat center;
+}
+/* This is used to make it work if not supported by any browser such as mozzarella firefox */
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: url(./bg.jpg) no-repeat center;
+}
+
+#label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* this will disable all the pointer selected related to this label */
+  pointer-events: none;
+  animation: animationSlide 3s ease-in-out infinite;
+}
+
+@keyframes animationSlide {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0, 0 10px rgb(88, 88, 165));
+  }
+  50% {
+    color: rgb(88, 88, 165);
+    filter: drop-shadow(0, 0 10px rgb(88, 88, 165));
+  }
+}
