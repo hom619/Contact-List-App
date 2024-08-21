@@ -1,12 +1,24 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .wrapper {
   background: url(./bg.jpg) no-repeat center;
   background-size: cover;
+  font-family: SF Pro;
   /* filter: blur(1px); */
 }
 .phone {
-  background: url(./bg.jpg) no-repeat center;
+  background: url(./background.jpg) no-repeat center;
   background-size: cover;
   /* filter: blur(0.5px); */
+}
+.phone::-webkit-scrollbar {
+  /*This will hide the scrollbar that is used as overflow with class phone */
+  display: none;
+}
+.slide-container {
+  background: url(./background.jpg);
 }
 .slider {
   width: 100%;
@@ -15,6 +27,7 @@
   appearance: none;
   opacity: 0.7;
   transition: opacity 0.2s;
+  background: url(./background.jpg) no-repeat;
 }
 .slider:hover {
   opacity: 1;
@@ -47,15 +60,23 @@
   pointer-events: none;
   animation: animationSlide 3s ease-in-out infinite;
 }
-
+.appBackground {
+  background: url(./background.jpg) cover;
+  top: 15%;
+  left: 25%;
+}
 @keyframes animationSlide {
   0%,
   100% {
-    color: black;
-    filter: drop-shadow(0, 0 10px rgb(88, 88, 165));
+    color: white;
+    filter: drop-shadow(0, 0 10px rgb(248, 178, 93));
   }
   50% {
-    color: rgb(88, 88, 165);
-    filter: drop-shadow(0, 0 10px rgb(88, 88, 165));
+    color: rgb(248, 178, 93);
+    filter: drop-shadow(0, 0 10px rgb(248, 178, 93));
   }
+}
+
+.header i {
+  right: 10px;
 }
