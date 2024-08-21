@@ -11,6 +11,10 @@ sliderElm.addEventListener("change", (e) => {
     label.textContent = "Slide to Unlock";
   }
 });
+const displayContactScreen = () => {
+  document.querySelector(".appScreen").style.display = "none";
+  document.querySelector(".contactListScreen").style.display = "block";
+};
 
 const displayScreen = () => {
   document.querySelector(".homeScreen").style.display = "none"; //hide homescreen

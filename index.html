@@ -14,7 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Contsct List</title>
+    <title>Contact List</title>
   </head>
   <body>
     <div
@@ -38,10 +38,7 @@
           </div>
         </div>
         <!-- Home screen  -->
-        <main
-          class="homeScreen h-100 p-2 position-relative"
-          style="display: none"
-        >
+        <main class="homeScreen h-100 p-2 position-relative">
           <div
             class="slide-container bg-white p-2 rounded-4 shadow position-relative"
             style="top: 350px"
@@ -70,6 +67,7 @@
                 <i
                   class="bi bi-person-rolodex fs-1 bg-white text-black px-2 rounded"
                   style="--bs-bg-opacity: 0.5"
+                  onclick="displayContactScreen()"
                 ></i>
                 <span class="text-white fs-2.5">Contacts</span>
               </div>
@@ -77,7 +75,7 @@
           </div>
         </main>
         <!-- Contact list screen -->
-        <main class="contactListScreen" style="height: 90%">
+        <main class="contactListScreen" style="height: 90%; display: none">
           <div class="contactListWrapper">
             <!-- Title -->
             <h2 class="text-white p-2 fw-bolder">Contacts</h2>
