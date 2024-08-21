@@ -1,4 +1,4 @@
-const apiUrl = "https://randomuser.me/api?results=4";
+const apiUrl = "https://randomuser.me/api?results=5";
 let users = [];
 const sliderElm = document.getElementById("unlockSlider");
 sliderElm.addEventListener("change", (e) => {
@@ -102,4 +102,16 @@ displayContacts = (users) => {
   });
 
   document.getElementById("usersAccordion").innerHTML = str;
+  document.getElementById("contactNumbers").innerHTML = users.length;
 };
+
+//search Bar
+document.getElementById("searchBar").addEventListener("keyup", (e) => {
+  const { value } = e.target;
+  const filteredUsers = users.filter((item) => {
+    const name = (item.name.first + " " + item.name.last).toLowerCase();
+
+    return name.includes(value.toLowerCase());
+  });
+  displayContacts(filteredUsers);
+});
