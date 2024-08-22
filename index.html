@@ -73,12 +73,42 @@
               </div>
             </div>
           </div>
+          <div
+            class="backIcon d-flex justify-content-center"
+            style="position: relative"
+          >
+            <div
+              class="p-2 bg-black text-black px-2 rounded"
+              style="--bs-bg-opacity: 0.5"
+            >
+              <i
+                class="bi bi-arrow-return-left"
+                style="color: white; font-size: large"
+                onclick="displayHomeScreen()"
+                >Back</i
+              >
+            </div>
+          </div>
         </main>
         <!-- Contact list screen -->
         <main class="contactListScreen" style="height: 90%; display: none">
           <div class="contactListWrapper">
             <!-- Title -->
-            <h2 class="text-white p-2 fw-bolder">Contacts</h2>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <h2 class="text-white p-2 fw-bolder">Contacts</h2>
+              <div
+                class="bg-black text-black px-2 rounded"
+                style="--bs-bg-opacity: 0.5"
+              >
+                <i
+                  class="bi bi-house-heart"
+                  style="color: white; font-size: large"
+                  onclick="displayHomeScreen()"
+                  >Home</i
+                >
+              </div>
+            </div>
+
             <!-- Search Bar -->
             <div class="header mt-2 p-2 position-relative">
               <i

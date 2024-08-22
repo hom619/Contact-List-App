@@ -83,3 +83,10 @@ a {
 .appScreen i {
   cursor: pointer;
 }
+.backIcon {
+  bottom: 30%;
+  right: 35%;
+}
+i:hover {
+  cursor: pointer;
+}

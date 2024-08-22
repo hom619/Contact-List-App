@@ -1,14 +1,14 @@
 const apiUrl = "https://randomuser.me/api?results=5";
 let users = [];
 const sliderElm = document.getElementById("unlockSlider");
+const labelElm = document.getElementById("label");
 sliderElm.addEventListener("change", (e) => {
   const { value } = e.target; //This is destructuring the value received from the slider range
-  const label = document.getElementById("label");
   if (value > 80) {
     label.textContent = "";
     displayScreen();
   } else {
-    label.textContent = "Slide to Unlock";
+    labelElm.textContent = "Slide to Unlock";
   }
 });
 const displayContactScreen = () => {
@@ -21,7 +21,12 @@ const displayScreen = () => {
   document.querySelector(".appScreen").style.display = "block"; //show app screen
   //hide the spinner
 };
-
+const displayHomeScreen = () => {
+  document.querySelector(".appScreen").style.display = "none";
+  document.querySelector(".homeScreen").style.display = "block";
+  sliderElm.value = 0;
+  labelElm.textContent = "Slide to Unlock";
+};
 //fetch user data from api
 const fetchRandomUsers = async (url) => {
   const response = await fetch(url);
